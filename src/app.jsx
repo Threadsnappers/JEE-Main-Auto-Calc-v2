@@ -91,10 +91,6 @@ export function App() {
             <Typography variant="subtitle1" gutterBottom>
               Incorrect Questions: {score.Incorrect_Questions.join(', ')}
             </Typography>
-
-            <Typography variant="subtitle1" gutterBottom>
-              Bonus Questions: {score.Bonus_Questions}
-            </Typography>
           </div>
         )}
       </Container>
