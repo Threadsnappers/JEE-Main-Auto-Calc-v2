@@ -22,7 +22,7 @@ export function Home() {
       formData.append('file1', file1)
       formData.append('file2', file2)
       try {
-        const response = await axios.post('https://jee-calc-api.vercel.app/score', formData,{
+        const response = await axios.post('https://jee-calc-api.vercel.app/score_file', formData,{
           headers: { 'Content-Type': 'multipart/form-data' },
         })
         setScore(response.data)
