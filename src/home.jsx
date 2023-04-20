@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks'
-import './../app.css'
+import './app.css'
 import axios from 'axios'
 import { Button, Container, TextField, Typography } from '@mui/material'
 

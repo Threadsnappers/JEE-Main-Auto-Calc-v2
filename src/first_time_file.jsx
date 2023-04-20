@@ -1,12 +1,20 @@
 import { useState } from 'preact/hooks'
-import './../app.css'
+import './app.css'
 import axios from 'axios'
 import { Button, Container, TextField, Typography } from '@mui/material'
 
-export function Recur() {
+export function First_Time_File() {
+  const [file1, setFile1] = useState(null)
+  const [file2, setFile2] = useState(null)
   const [score, setScore] = useState(null)
   const [app_no, setAppNo] = useState('')
 
+  const handleFile1Change = (e) => {
+    setFile1(e.target.files[0])
+  }
+  const handleFile2Change = (e) => {
+    setFile2(e.target.files[0])
+  }
   const handleAppNoChange = (e) => {
     setAppNo(e.target.value)
   }
@@ -14,10 +22,12 @@ export function Recur() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const formData = new FormData()
-    if(app_no){
+    if(file1 && file2 && app_no){
       formData.append('app_no', app_no)
+      formData.append('file1', file1)
+      formData.append('file2', file2)
       try {
-        const response = await axios.post('https://jee-calc-api.vercel.app/score_app', formData,{
+        const response = await axios.post('https://jee-calc-api.vercel.app/score_file', formData,{
           headers: { 'Content-Type': 'multipart/form-data' },
         })
         setScore(response.data)
@@ -38,7 +48,7 @@ export function Recur() {
           JEE Main Score Calculator
         </Typography>
         <Typography variant='subtitle1' gutterBottom>
-          Enter your application number to calculate scores.
+          Upload your answer key and response sheet as .html files to calculate scores or enter your application number and answer key and response sheet links to calculate scores.
         </Typography>
         <TextField
           sx = {{ input: {color: 'white'}}}
@@ -49,8 +59,26 @@ export function Recur() {
           label="Application Number"
           InputLabelProps={{shrink: true}}
           onChange={handleAppNoChange} />
+        <TextField
+          sx = {{ input: {color: 'white'}}}
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          type="file"
+          label="Answer Key"
+          InputLabelProps={{shrink: true}}
+          onChange={handleFile1Change} />
+        <TextField
+          sx = {{ input: {color: 'white'}}}
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          type="file"
+          label="Response Sheet"
+          InputLabelProps={{shrink: true}}
+          onChange={handleFile2Change} /> 
         <Button variant='contained' color='primary' onClick={handleSubmit}>
-          Get Score
+          Calculate Score
         </Button>
         {score && (
           <div>

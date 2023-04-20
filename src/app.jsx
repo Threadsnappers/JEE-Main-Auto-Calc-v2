@@ -3,9 +3,9 @@ import './app.css'
 import axios from 'axios'
 import { Button, Container, TextField, Typography } from '@mui/material'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { First_Time_File } from './pages/first_time_file'
-import { Home } from './pages/home'
-import { Recur } from './pages/recur'
+import { First_Time_File } from './first_time_file'
+import { Home } from './home'
+import { Recur } from './recur'
 
 export function App() {
   return (
