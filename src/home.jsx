@@ -3,7 +3,7 @@ import './app.css'
 import axios from 'axios'
 import { Button, Container, TextField, Typography } from '@mui/material'
 
-export function First_Time_File() {
+export function Home() {
   const [file1, setFile1] = useState(null)
   const [file2, setFile2] = useState(null)
   const [score, setScore] = useState(null)
