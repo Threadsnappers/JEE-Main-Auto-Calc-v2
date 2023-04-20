@@ -60,17 +60,8 @@ export function Home() {
           JEE Main Score Calculator
         </Typography>
         <Typography variant='subtitle1' gutterBottom>
-          Upload your answer key and response sheet as .html files to calculate scores or enter your application number and answer key and response sheet links to calculate scores.
+          Upload your answer key and response sheet as .html files to calculate scores.
         </Typography>
-        <TextField
-          sx = {{ input: {color: 'white'}}}
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          type="text"
-          label="Application Number"
-          InputLabelProps={{shrink: true}}
-          onChange={handleAppNoChange} />
         <TextField
           sx = {{ input: {color: 'white'}}}
           fullWidth
