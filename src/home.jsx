@@ -60,7 +60,6 @@ export function Home() {
           JEE Main Score Calculator
         </Typography>
         <Typography variant='subtitle1' gutterBottom>
-          Recurring users just fill application number.
           Upload your answer key and response sheet as .html files to calculate scores or enter your application number and answer key and response sheet links to calculate scores.
         </Typography>
         <TextField
