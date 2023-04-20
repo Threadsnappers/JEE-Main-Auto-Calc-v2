@@ -7,7 +7,6 @@ export function Home() {
   const [file1, setFile1] = useState(null)
   const [file2, setFile2] = useState(null)
   const [score, setScore] = useState(null)
-  const [app_no, setAppNo] = useState('')
 
   const handleFile1Change = (e) => {
     setFile1(e.target.files[0])
@@ -27,18 +26,6 @@ export function Home() {
       formData.append('file2', file2)
       try {
         const response = await axios.post('https://jee-calc-api.vercel.app/score_file', formData,{
-          headers: { 'Content-Type': 'multipart/form-data' },
-        })
-        setScore(response.data)
-        console.log(response.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    else if(app_no){
-      formData.append('app_no', app_no)
-      try {
-        const response = await axios.post('https://jee-calc-api.vercel.app/score_appe', formData,{
           headers: { 'Content-Type': 'multipart/form-data' },
         })
         setScore(response.data)
