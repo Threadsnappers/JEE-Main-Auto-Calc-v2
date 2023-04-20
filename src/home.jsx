@@ -21,7 +21,7 @@ export function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const formData = new FormData()
-    if(file1 && file2 && app_no){
+    if(file1 && file2){
       formData.append('file1', file1)
       formData.append('file2', file2)
       try {
