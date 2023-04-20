@@ -12,5 +12,5 @@ If you want to refer to v1 of the app, check [here](https://github.com/The-Coder
 
 [Reddit Post](http://reddit.com/r/JEENEETards/comments/12s2tnr/jee_main_auto_calculator/)
 
-We reached first result on google
-![image](https://user-images.githubusercontent.com/58686913/233450437-b8c68db4-be20-4810-b926-4bb9428276c1.png)
+Reached First Page of Google:
+![image](https://user-images.githubusercontent.com/58686913/233450864-6fc1b1ac-6620-4457-a7e3-0d3b60c8efa5.png)
