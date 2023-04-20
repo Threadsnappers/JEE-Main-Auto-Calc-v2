@@ -14,9 +14,6 @@ export function Home() {
   const handleFile2Change = (e) => {
     setFile2(e.target.files[0])
   }
-  const handleAppNoChange = (e) => {
-    setAppNo(e.target.value)
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
