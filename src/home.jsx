@@ -23,7 +23,6 @@ export function Home() {
     e.preventDefault()
     const formData = new FormData()
     if(file1 && file2 && app_no){
-      formData.append('app_no', app_no)
       formData.append('file1', file1)
       formData.append('file2', file2)
       try {
