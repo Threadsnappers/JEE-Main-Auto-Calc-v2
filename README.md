@@ -1,3 +1,6 @@
+# DISCLAIMER
+The website is no longer active running now. Feel free to run it locally if required.
+
 # JEE-Main-Auto-Calc-v2
 
 The v2 of JEE Main Auto Calc created for JEE Mains Shift 2 2023
